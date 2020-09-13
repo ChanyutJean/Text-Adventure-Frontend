@@ -12,7 +12,7 @@ function Form(props) {
         const newInput = props.input === "No inputs yet!" ? props.form : props.input + "\n" + props.form
         props.setInput(newInput)
         props.setForm("")
-        axios.post('http://localhost:8080', newInput)
+        axios.post('https://text-adventure-backend.herokuapp.com/', newInput)
             .then(response => props.setOutput(response.data));
     }
     
