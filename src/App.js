@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+import Header from './components/Header.js'
+import Output from './components/Output.js'
+import Input from './components/Input.js'
+import Form from './components/Form.js'
+
 function App() {
+
+  const [input, setInput] = useState("No inputs yet!")
+  const [output, setOutput] = useState("Enter your name to start the game!")
+  const [form, setForm] = useState("")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="board">
+        <Output output={output} />
+        <Input input={input} />
+      </div>
+      <Form form={form} setForm={setForm} input={input} setInput={setInput} setOutput={setOutput} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

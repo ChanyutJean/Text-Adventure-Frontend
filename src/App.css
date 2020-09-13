@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Jetbrains Mono';
+  src: url('./JetBrainsMono-Regular.woff');
+}
+
 .App {
   text-align: center;
+  background-color: rgb(89, 91, 93);
 }
 
 .App-logo {
@@ -13,21 +19,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +26,123 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Header CSS */
+
+.header {
+  background-color: rgb(20, 20, 20);
+  overflow: hidden;
+  height: 10vh;
+  min-height: 40px;
+}
+
+.header a {
+  float: left;
+  color: rgb(97, 219, 251);
+  text-decoration: none;
+  font-size: 3.5vh;
+  font-family: 'georgia';
+  line-height: 10vh;
+}
+
+.header img {
+  float: left;
+  width: 10vh;
+  height: 10vh;
+}
+
+@media (max-height: 400px) {
+  .header a {
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .header img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Board CSS */
+
+.board {
+  order: 1;
+  height: 80vh;
+  display: flex;
+  margin: auto;
+}
+
+.left {
+  /* Box */
+  margin: 10px 1px 10px 10px;
+  border: 10px solid rgb(60, 63, 65);
+  padding: 10px;
+  background-color: rgb(43, 43, 43);
+
+  /* Font */
+  color: rgb(187, 187, 187);
+  font-family: 'Jetbrains Mono';
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: left;
+  white-space: pre;
+
+
+  /* Alignment */  
+  flex: 80%;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+.right {
+  /* Box */
+  margin: 10px 10px 10px 0px;
+  border: 10px solid rgb(60, 63, 65);
+  padding: 10px;
+  background-color: rgb(43, 43, 43);
+
+  /* Font */
+  color: rgb(187, 187, 187);
+  font-family: 'Consolas';
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: right;
+  white-space: pre;
+
+
+  /* Alignment */  
+  flex: 20%;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+.inner-right {
+  float: right;
+}
+
+/* Form CSS */
+
+.form {
+  min-height: 10vh;
+}
+
+.input {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.submit {
+  background-color: rgb(89, 106, 125);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  margin: 5px;
+  padding: 5px;
 }
