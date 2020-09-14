@@ -8,7 +8,7 @@ import Form from './components/Form.js'
 
 function App() {
 
-  const [input, setInput] = useState("No inputs yet!")
+  const [input, setInput] = useState("!No inputs yet") // direction: rtl
   const [output, setOutput] = useState("Enter your name to start the game!")
   const [form, setForm] = useState("")
 

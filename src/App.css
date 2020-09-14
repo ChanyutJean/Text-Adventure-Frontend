@@ -112,7 +112,8 @@
   white-space: pre;
 
 
-  /* Alignment */  
+  /* Alignment */ 
+  direction: rtl; 
   flex: 20%;
   overflow-x: auto;
   overflow-y: scroll;
