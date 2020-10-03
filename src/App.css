@@ -90,7 +90,7 @@
 
 
   /* Alignment */  
-  flex: 80%;
+  flex: 85%;
   overflow-x: auto;
   overflow-y: scroll;
 }
@@ -114,7 +114,7 @@
 
   /* Alignment */ 
   direction: rtl; 
-  flex: 20%;
+  flex: 15%;
   overflow-x: auto;
   overflow-y: scroll;
 }
